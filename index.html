@@ -1,43 +1,191 @@
-<!-- Unit 6 Project
-Requirements
-[  ] three different shapes
-[  ] three different RGB colors
-[  ] three comments 
-[  ] three new HTML elements 
-
-Select ONE Additional 
-[ no ] Feature 1 - three different strokeWeight() commands
-[ no ] Feature 2 - Add a second <canvas>
-[ no ] Feature 3 - Change Tab Title & Image
-[ no ] Feature 4 - Typewriter Animation
-[ no ] Feature 5 - Gradient Background
--->
-
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Project: Recipe Book</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Unit 6 Project</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
-    <style></style>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      h2 {
+        color: #555;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      /* Additional CSS Declarations */
+      .highlight {
+        background-color: #ffeb3b;
+        font-weight: bold;
+      }
+      .note {
+        font-style: italic;
+        color: #888;
+      }
+      .custom-list {
+        list-style-type: square;
+        color: #555;
+      }
+    </style>
   </head>
-
   <body>
-    <div class="container">
-      <div>
-        <h2 id="start">How it started.</h2>
-        <img
-          class="pic" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/Chill_guy_original_artwork.jpg/220px-Chill_guy_original_artwork.jpg"
-        />
-      </div>
-      <div>
-        <h2 id="end">How it ended.</h2>
-        <canvas id="myCanvas" data-processing-sources="myP5Code.pde"> </canvas>
-      </div>
-    </div>
-  </body>
-</html>
-
-<!--- Taken From Khan Academy Intro to JS: Drawing & Animation --->
+    <h1>My Recipe Book</h1>
+    <h2>Contents:</h2>
+    <ol>
+      <li><a href="#recipe1">Recipe #1: Chocolate Cake</a></li>
+      <li><a href="#recipe2">Recipe #2: Pasta Primavera</a></li>
+    </ol>
+    <h2 id="recipe1">Recipe #1: Chocolate Cake</h2>
+    <ul>
+      <li>Time: 1 hour</li>
+      <li>Serves: 8</li>
+    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Ingredients</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>All-purpose flour</td>
+          <td>3 cups</td>
+        </tr>
+        <tr>
+          <td>Granulated sugar</td>
+          <td>3 cups</td>
+        </tr>
+        <tr>
+          <td>Unsweetened cocoa powder</td>
+          <td>1 1/2 cups</td>
+        </tr>
+        <tr>
+          <td>Baking soda</td>
+          <td>1 tablespoon</td>
+        </tr>
+        <tr>
+          <td>Baking powder</td>
+          <td>1 1/2 teaspoons</td>
+        </tr>
+        <tr>
+          <td>Salt</td>
+          <td>1 1/2 teaspoons</td>
+        </tr>
+        <tr>
+          <td>Large eggs</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Buttermilk</td>
+          <td>1 1/2 cups</td>
+        </tr>
+        <tr>
+          <td>Warm water (or brewed coffee)</td>
+          <td>1 1/2 cups</td>
+        </tr>
+        <tr>
+          <td>Vegetable oil</td>
+          <td>1/2 cup</td>
+        </tr>
+        <tr>
+          <td>Vanilla extract</td>
+          <td>2 teaspoons</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Step 1:</strong> Preheat the oven to 350°F (175°C).</p>
+    <p><strong>Step 2:</strong> Mix all the dry ingredients together.</p>
+    <p><strong>Step 3:</strong> Add wet ingredients and mix until smooth.</p>
+    <p>
+      <strong>Step 4:</strong> Pour batter into prepared pans and bake for 30-35
+      minutes.
+    </p>
+    <p>
+      <em
+        >Source:
+        <a href="https://thestayathomechef.com/the-most-amazing-chocolate-cake/"
+          >Chocolate Cake Recipe</a
+        ></em
+      >
+    </p>
+    <img
+      src="https://th.bing.com/th/id/OIP.d83hGC5oJ0CSC97qvLXg1QAAAA?rs=1&pid=ImgDetMain"
+      alt="Chocolate Cake"
+      width="300"
+    />
+    <p>
+      <em
+        >More recipes at:
+        <a href="https://www.allrecipes.com/">All Recipes Website</a></em
+      >
+    </p>
+    <h2 id="recipe2">Recipe #2: Pasta Primavera</h2>
+    <ul>
+      <li>Time: 30 minutes</li>
+      <li>Serves: 4</li>
+    </ul>
+    <p>
+      <strong>Step 1:</strong> Boil the farfalle pasta in salted water until al
+      dente.
+    </p>
+    <p>
+      <strong>Step 2:</strong> In a large skillet, heat olive oil and sauté the
+      vegetables until tender.
+    </p>
+    <p>
+      <strong>Step 3:</strong> Add cooked pasta, cherry tomatoes, and herbs.
+      Toss to combine.
+    </p>
+    <p><strong>Step 4:</strong> Serve with grated Parmesan on top.</p>
+    <p>
+      <em
+        >Source:
+        <a
+          href="https://www.foodnetwork.com/recipes/giada-de-laurentiis/pasta-primavera-recipe-1942131"
+          >Pasta Primavera Website</a
+        ></em
+      >
+    </p>
+    <img
+      src="https://th.bing.com/th/id/R.abf403a9c55b006852eb10b5855c97de?rik=k7ZLpw21hOCFnQ&pid=ImgRaw&r=0"
+      alt="Pasta Primavera"
+      width="300"
+    />
+    <!-- New HTML Elements -->
+    <h2>About This Recipe Book</h2>
+    <p class="note">
+      This collection features some of my favorite recipes that are both
+      delicious and easy to prepare. I hope you enjoy trying them out!
+    </p>
+    <ul class="custom-list">
+      <li>Easy to follow instructions</li>
+      <li>Ingredients readily available</li>
+      <li>Tested and approved recipes</li>
+    </ul>
+    <!-- p5.js Sketch 
